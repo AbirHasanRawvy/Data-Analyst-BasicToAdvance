@@ -1,0 +1,20 @@
+create Database mydb;
+use mydb;
+
+CREATE TABLE Students(
+
+	StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(50),
+    Department VARCHAR(50),
+    Age INT,
+    City VARCHAR(50)
+
+);
+
+ALTER TABLE Students
+ADD Email VARCHAR(80) FIRST;
+
+ALTER TABLE Students
+MODIFY COLUMN Email VARCHAR(80) AFTER StudentName;
+
+SELECT * FROM Students;
