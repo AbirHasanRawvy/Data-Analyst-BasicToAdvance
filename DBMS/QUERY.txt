@@ -17,4 +17,26 @@ ADD Email VARCHAR(80) FIRST;
 ALTER TABLE Students
 MODIFY COLUMN Email VARCHAR(80) AFTER StudentName;
 
-SELECT * FROM Students;
+
+
+
+
+INSERT INTO Students 
+(StudentID, StudentName, Email, Department, Age, City)
+VALUES
+(1002, 'Iftear Ratul', 'ratulift...@gmail.com', 'CSE', 25, 'Dhaka'),
+(1003, 'Ibne Khan', 'tahafibnekhan@gmail.com', 'CSE', 25, 'Dhaka');
+
+INSERT INTO Students 
+(StudentID, StudentName, Email, Department, Age, City)
+VALUES(1004, 'Fahmid Imtiaz', 'fahmidimtiaz@gmail.com', 'CSE', 25, 'Dhaka');
+
+UPDATE Students 
+SET City = 'Gazipur'
+WHERE StudentID = 1004;
+
+SELECT * FROM Students
+WHERE Email = 'fahmidimtiaz@gmail.com' AND City = 'Gazipur';
+
+SELECT * FROM Students
+WHERE City = 'Dhaka' OR City = 'Gazipur';
