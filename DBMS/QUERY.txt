@@ -57,3 +57,42 @@ values
 (2008, 'AI', 'Dhaka', 2, 12000.00);
 
 select * from Sales;
+
+select Product,
+Sum(Revenue)
+from Sales
+group by product;
+
+select Region,
+sum(Revenue) as Total_Revenue
+from Sales
+group by Region;
+
+select Region,
+avg(Revenue) as Total_Average
+from Sales
+group by Region;
+
+select Region,
+count(*)
+from Sales
+group by Region;
+
+select Product,
+count(*)
+from Sales
+group by Product;
+
+select Product,
+Sum(Revenue) as Total_Revenue,
+avg(Revenue) as AVG_Revenue,
+count(*) as Order_time
+from Sales
+group by Product;
+
+select Region,
+Sum(Revenue) as Total_Revenue,
+avg(Revenue) as AVG_Revenue,
+count(*) as Order_time
+from Sales
+group by Region;
