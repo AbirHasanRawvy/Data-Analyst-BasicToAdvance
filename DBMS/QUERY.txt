@@ -17,10 +17,6 @@ ADD Email VARCHAR(80) FIRST;
 ALTER TABLE Students
 MODIFY COLUMN Email VARCHAR(80) AFTER StudentName;
 
-
-
-
-
 INSERT INTO Students 
 (StudentID, StudentName, Email, Department, Age, City)
 VALUES
@@ -40,3 +36,24 @@ WHERE Email = 'fahmidimtiaz@gmail.com' AND City = 'Gazipur';
 
 SELECT * FROM Students
 WHERE City = 'Dhaka' OR City = 'Gazipur';
+
+CREATE TABLE Sales(
+	OrderID INT Primary key,
+    Product Varchar(50),
+    Region Varchar(50),
+    Quantity INT,
+    Revenue Decimal(10,2)
+);
+
+INSERT INTO Sales(OrderID, Product, Region, Quantity, Revenue)
+values
+(2001, 'PLC', 'Dhaka', 3, 2550.00),
+(2002, 'IOT', 'Dhaka', 1, 5000.00),
+(2003, 'PLC', 'Khulna', 3, 15000.00),
+(2004, 'AI', 'Dhaka', 2, 12000.00),
+(2005, 'IOT', 'Khulna', 2, 10000.00),
+(2006, 'IOT', 'Dhaka', 1, 5000.00),
+(2007, 'PLC', 'Khulna', 3, 15000.00),
+(2008, 'AI', 'Dhaka', 2, 12000.00);
+
+select * from Sales;
