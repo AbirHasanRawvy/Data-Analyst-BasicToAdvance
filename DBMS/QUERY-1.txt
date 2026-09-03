@@ -1,0 +1,8 @@
+use khjrdb;
+
+ create table  students(
+	StudentID int primary key,
+    StudentName varchar(50),
+    City varchar(50)
+ );
+ 
