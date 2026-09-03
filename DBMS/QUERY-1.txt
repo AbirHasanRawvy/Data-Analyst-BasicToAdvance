@@ -6,3 +6,51 @@ use khjrdb;
     City varchar(50)
  );
  
+insert into students values
+(101, 'Abir Hasan', 'Dhaka'),
+(102, 'Akash Shahariar', 'Nator'),
+(103, 'Siam Uddin', 'Dhaka'),
+(104, 'Azmain Yasin', 'Dhaka'),
+(105, 'Aiman Yasin', 'Dhaka'),
+(106, 'Yasbir Ibn Asad', 'Dhaka'),
+(107, 'Azwa Binte Asad', 'Dhaka');
+
+select * from students;
+
+create table course(
+	CourseID int primary key,
+    CourseName varchar(50)
+);
+
+insert into course values
+(201, 'SE'),
+(202, 'Marketing'),
+(203, 'Physics'),
+(204, 'Physics'),
+(205, 'English'),
+(206, 'Bangla'),
+(207, 'Bangla');
+
+select * from course;
+
+
+create table enrollment(
+	EnrID int primary key,
+    StudentID int,
+    CourseID int,
+    
+    foreign key (StudentID)
+    references students(StudentID),
+    
+    foreign key (CourseID)
+    references course(courseID)
+);
+
+select * from enrollment;
+
+insert into enrollment values
+(1, 1001, 201),
+(2, 1002, 202),
+(3, 1003, 203),
+(4, 1004, 204),
+(5, 1005, 205);
