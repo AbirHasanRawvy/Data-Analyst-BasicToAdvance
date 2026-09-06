@@ -54,3 +54,10 @@ insert into enrollment values
 (3, 1003, 203),
 (4, 1004, 204),
 (5, 1005, 205);
+
+select 
+students.StudentName,
+course.courseName
+
+from student inner join courses
+on students.StudentID = courses.StudentID 
