@@ -60,4 +60,9 @@ students.StudentName,
 course.courseName
 
 from student inner join courses
-on students.StudentID = courses.StudentID 
+on enrollment.courseID = course.CourseID 
+
+inner join course;
+
+
+select * from courses;
