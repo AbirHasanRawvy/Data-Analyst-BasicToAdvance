@@ -1,0 +1,17 @@
+use khjrdb;
+
+create table Sales1(
+	orderID int primary key,
+    customerName varchar(50),
+    city varchar(50),
+    productName varchar(50),
+    amount decimal(10, 2)
+);
+
+
+insert into Sales1
+values
+(501, 'Farid Uddin', 'Phoenix', 'Laptop', 2000),
+(502, 'Farhan Sadek Adib', 'Phoenix', 'BMW', 20000),
+(503, 'Sanjida Gulshan Quin', 'Phoenix', 'Watch', 1500),
+(504, 'Samantha Faria Audity', 'Phoenix', 'Laptop', 2000);
