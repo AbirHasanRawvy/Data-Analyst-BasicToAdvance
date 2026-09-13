@@ -18,7 +18,14 @@ values
 
 explain
 select * from Sales1
-where city = 'Phoenix';
+where city = 'Phoenix'
+and productName = 'Laptop';
 
 create index idx_city
 on Sales1(city);
+
+drop index idx_city
+on Sales1;
+
+create index idx_city_prod
+on Sales1(city, productName);
