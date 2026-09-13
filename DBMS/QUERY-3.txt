@@ -15,3 +15,10 @@ values
 (502, 'Farhan Sadek Adib', 'Phoenix', 'BMW', 20000),
 (503, 'Sanjida Gulshan Quin', 'Phoenix', 'Watch', 1500),
 (504, 'Samantha Faria Audity', 'Phoenix', 'Laptop', 2000);
+
+explain
+select * from Sales1
+where city = 'Phoenix';
+
+create index idx_city
+on Sales1(city);
