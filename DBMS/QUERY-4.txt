@@ -1,1 +1,5 @@
 use khjrdb;
+
+select * from dataset where CustomerID = 110;
+
+select count(*) as Total_Order from dataset;
