@@ -27,3 +27,8 @@ sum(Amout) total_ravenue
 from dataset
 group  by month(OrderDate)
 order by total_ravenue desc;
+
+
+create index _idx_cusid on dataset(CustomerID);
+explain
+select * from dataset where ProductID=210;
