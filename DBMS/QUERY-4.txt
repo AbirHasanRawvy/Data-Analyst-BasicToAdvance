@@ -3,3 +3,27 @@ use khjrdb;
 select * from dataset where CustomerID = 110;
 
 select count(*) as Total_Order from dataset;
+
+select city,
+sum(Amout) as top_region
+from dataset
+group by city
+order by top_region desc;
+
+select ProductName,
+sum(Amout) as Ravenue
+from dataset
+group by ProductName
+order by Ravenue desc;
+
+select CustomerName,
+sum(Amout) as Quantity
+from dataset
+group by CustomerName
+order by Quantity desc;
+
+select month(OrderDate) as Month,
+sum(Amout) total_ravenue
+from dataset
+group  by month(OrderDate)
+order by total_ravenue desc;
