@@ -1,0 +1,6 @@
+1) What is pandas?
+2) Understanding series & DataFrame?
+3) Loading Data from a csv file
+4) Exploring & understanding a dataset.
+5) Cheking messing values.
+6) Extracting business insights from data.
