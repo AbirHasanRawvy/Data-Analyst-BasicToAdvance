@@ -4,3 +4,10 @@
 4) Exploring & understanding a dataset.
 5) Cheking messing values.
 6) Extracting business insights from data.
+
+Management Wants:
+-------------------
+1) Which city generates the highest revenue?
+2) Who are the top customer?
+3) Which region perform the best?
+4) Which customers generates the highest profile?
